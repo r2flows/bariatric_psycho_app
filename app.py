@@ -146,7 +146,7 @@ def generar_pdf(datos):
                 texto = texto.replace(frase, "").strip()
         
         # Si sigue siendo muy largo o tiene estructura extraña, usar un valor predeterminado
-        if len(texto) > 500 or texto.count('\n') > 5:
+        if not texto.strip():
             if campo == 'antecedentes_natales':
                 texto = "Sin antecedentes relevantes."
             elif campo == 'factores_origen':
